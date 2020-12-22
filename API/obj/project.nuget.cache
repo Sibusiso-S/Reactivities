@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "diNKOG0Eqps6+Mz5Dk35QL5j1ND8JPqkTu+Vk14fCQbcZDAsCJMy/s0F01jFU/ycMlBDMlPVPdnAObq8rVg7vQ==",
+  "dgSpecHash": "0L3ykA0vWejcoOHmqzruVV+C+o8+gB2V1dG7NeFnfTdBRhBlhDY7JtCJN8iClX4gW9cw4spFLfwU/Z2Fh3IGPw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
