@@ -1,4 +1,3 @@
-C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\api\bin\Debug\netcoreapp3.1\Application.exe
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\api\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\api\bin\Debug\netcoreapp3.1\API.exe
