@@ -1,13 +1,14 @@
 import React, { useState, FormEvent } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 import { IActivity } from "../../../app/models/activity";
-import {v4 as uuid} from "uuid";
+import { v4 as uuid } from "uuid";
 
 interface IProps {
   setEditMode: (editMode: boolean) => void;
   activity: IActivity;
   createActivity: (activity: IActivity) => void;
   editActivity: (activity: IActivity) => void;
+  submitting: boolean;
 }
 
 const ActivityForm: React.FC<IProps> = ({
@@ -15,6 +16,7 @@ const ActivityForm: React.FC<IProps> = ({
   activity: intialFormState,
   createActivity,
   editActivity,
+  submitting,
 }) => {
   const initializeForm = () => {
     if (intialFormState) return intialFormState;
@@ -32,22 +34,22 @@ const ActivityForm: React.FC<IProps> = ({
 
   const [activity, setActivity] = useState<IActivity>(initializeForm);
 
-  const handleInputChange = (event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    event: FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.currentTarget;
     setActivity({ ...activity, [name]: value });
   };
 
-  const handleSubmit = () =>{
-      if(activity.id.length ===0){
-        let newActivity ={
-          ...activity,
-          id:uuid()
-        }
-        createActivity(newActivity);
-      }
-      else
-        editActivity(activity);
-  }
+  const handleSubmit = () => {
+    if (activity.id.length === 0) {
+      let newActivity = {
+        ...activity,
+        id: uuid(),
+      };
+      createActivity(newActivity);
+    } else editActivity(activity);
+  };
   return (
     <Segment clearing>
       <Form onSubmit={handleSubmit}>
@@ -95,7 +97,13 @@ const ActivityForm: React.FC<IProps> = ({
           onClick={() => setEditMode(false)}
           content="Cancel"
         />
-        <Button floated="right" positive type="submit" content="Submit" />
+        <Button
+          floated="right"
+          positive
+          type="submit"
+          content="Submit"
+          loading={submitting}
+        />
       </Form>
     </Segment>
   );
