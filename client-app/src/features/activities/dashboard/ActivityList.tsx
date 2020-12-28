@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Button, Item, Label, Segment } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
 import activityStore from "../../../app/stores/activityStore";
+import { Link } from "react-router-dom";
 
 const ActivityList: React.FC = () => {
   const ActivityStore = useContext(activityStore);
@@ -40,6 +41,7 @@ const ActivityList: React.FC = () => {
                   floated="right"
                   content="View"
                   color="blue"
+                  as={Link} to={`/actvities/${activity.id}`}
                 />
                 <Label basic content={activity.category} />
               </Item.Extra>

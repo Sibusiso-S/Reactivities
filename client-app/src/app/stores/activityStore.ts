@@ -15,7 +15,7 @@ class ActivityStore {
   @observable activityRegistry = new Map();
   @observable activities: IActivity[] = [];
   @observable loadingInitial = false;
-  @observable selectedActivity: IActivity | undefined;
+  @observable activity: IActivity | undefined;
   @observable editMode = false;
   @observable submitting = false;
   @observable target = "";
@@ -45,6 +45,32 @@ class ActivityStore {
     }
   };
 
+  @action loadActivity = async (id: string) =>{ 
+    let activity = this.activityRegistry.get(id);
+    if(activity){
+      this.activity = activity;
+    }
+    else{
+      this.loadingInitial = true;
+      try {
+        activity = await agents.Activities.details(id);
+        runInAction( () => {
+          this.activity = activity
+          this.loadingInitial = false;
+        })
+      } catch (error) {
+        runInAction( () => {
+          this.loadingInitial = false;
+        })
+        console.log(error)
+      }
+    }
+  }
+
+  getActivity = async (id: string) =>{ 
+    return this.activityRegistry.get(id);
+  }
+
   @action createActivity = async (activity: IActivity) => {
     this.submitting = true;
     try {
@@ -68,7 +94,7 @@ class ActivityStore {
       await agents.Activities.update(activity);
       runInAction(() => {
         this.activityRegistry.set(activity.id, activity);
-        this.selectedActivity = activity;
+        this.activity = activity;
         this.editMode = false;
         this.submitting = false;
       })
@@ -102,16 +128,16 @@ class ActivityStore {
 
   @action openCreateForm = () => {
     this.editMode = true;
-    this.selectedActivity = undefined;
+    this.activity = undefined;
   };
 
   @action openEditForm = (id : string) => {
     this.editMode = true;
-    this.selectedActivity = this.activityRegistry.get(id);
+    this.activity = this.activityRegistry.get(id);
   };
 
   @action cancelSelectedActivity = () =>{
-      this.selectedActivity = undefined;
+      this.activity = undefined;
   }
 
   @action cancelFormOpen = () =>{
@@ -119,7 +145,7 @@ class ActivityStore {
   }
 
   @action selectActivity = (id: string) => {
-    this.selectedActivity = this.activityRegistry.get(id);
+    this.activity = this.activityRegistry.get(id);
     this.editMode = false;
   };
 }
