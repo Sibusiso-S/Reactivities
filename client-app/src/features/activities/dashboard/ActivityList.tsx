@@ -11,7 +11,6 @@ const ActivityList: React.FC = () => {
     target,
     deleteActivity,
     activitiesByDate,
-    selectActivity,
   } = ActivityStore;
   return (
     <Segment clearing>
@@ -37,11 +36,10 @@ const ActivityList: React.FC = () => {
                   loading={target === activity.id && submitting}
                 />
                 <Button
-                  onClick={() => selectActivity(activity.id)}
                   floated="right"
                   content="View"
                   color="blue"
-                  as={Link} to={`/actvities/${activity.id}`}
+                  as={Link} to={`/activities/${activity.id}`}
                 />
                 <Label basic content={activity.category} />
               </Item.Extra>

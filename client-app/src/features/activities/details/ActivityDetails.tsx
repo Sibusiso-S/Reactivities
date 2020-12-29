@@ -1,17 +1,35 @@
 import { observer } from "mobx-react-lite";
-import React, {useContext} from "react";
+import React, { useContext, useEffect } from "react";
+import { Link, RouteComponentProps } from "react-router-dom";
 import { Button, Card, Image } from "semantic-ui-react";
-import ActivityStore from '../../../app/stores/activityStore';
+import LoadingComponent from "../../../app/layout/LoadingComponent";
+import ActivityStore from "../../../app/stores/activityStore";
 
-const ActivityDetails : React.FC= () => {
+interface DetailProps{
+  id:string
+}
+
+const ActivityDetails: React.FC<RouteComponentProps<DetailProps>> = ({match, history}) => {
   const activityStore = useContext(ActivityStore);
-  const {cancelSelectedActivity, openEditForm, activity} = activityStore;
+  const {
+    activity,
+    loadActivity,
+    loadingInitial,
+  } = activityStore;
 
-  return <h1>Activity details</h1>
+  useEffect(() => {
+    loadActivity(match.params.id);
+  }, [loadActivity, match.params.id])
+
+  if (loadingInitial || !activity) return <LoadingComponent content="Loading activity..." />
 
   return (
     <Card fluid>
-      <Image src={`/assets/categoryImages/${activity!.category}.jpg`} wrapped ui={false} />
+      <Image
+        src={`/assets/categoryImages/${activity!.category}.jpg`}
+        wrapped
+        ui={false}
+      />
       <Card.Content>
         <Card.Header>{activity!.title}</Card.Header>
         <Card.Meta>
@@ -21,8 +39,18 @@ const ActivityDetails : React.FC= () => {
       </Card.Content>
       <Card.Content extra>
         <Button.Group widths={2}>
-          <Button basic color="blue" onClick={() => openEditForm(activity!.id)} content="Edit" />
-          <Button basic color="grey" onClick={cancelSelectedActivity} content="Cancel" />
+          <Button
+          as={Link} to={`/manage/${activity.id}`}
+            basic
+            color="blue"
+            content="Edit"
+          />
+          <Button
+            basic
+            color="grey"
+            onClick={() => history.push("/activities")}
+            content="Cancel"
+          />
         </Button.Group>
       </Card.Content>
     </Card>

@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, Container, Button } from "semantic-ui-react";
-import ActivityStore from "../../app/stores/activityStore";
 
 const NavBar: React.FC = () => {
-  const activityStore = useContext(ActivityStore);
   return (
     <Menu fixed="top" inverted>
       <Container>
@@ -17,7 +14,6 @@ const NavBar: React.FC = () => {
           <Button
             as={NavLink}
             to="/createActivity"
-            onClick={activityStore.openCreateForm}
             positive
             content="Create Activity"
           />
