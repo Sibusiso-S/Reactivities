@@ -28,8 +28,12 @@ namespace DatingApp.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<string>> Get(int id)
         {
-            var values = await _context.Values.FindAsync(id);
-            return Ok(values);
+            var value = await _context.Values.FindAsync(id);
+
+            if(value == null)
+                return NotFound();
+                
+            return Ok(value);
         }
 
         // POST api/values

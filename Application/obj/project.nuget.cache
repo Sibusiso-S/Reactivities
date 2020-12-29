@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sdfKKCUN+5y8/yQSwbs5ZqIk+9TX1ZuaQghpoSYiKGSOUijdRCSbOuZa3N4F6/CmvXlW4oTaRHC1pGavfyNU/A==",
+  "dgSpecHash": "9AU4nYlLiodYUuZ/nUat25zItIaBeZGWQsEdwN3FonABsQFSWp7zlcIr2zaMDHH2MTEon03+mDppcPIPyfwd5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\fluentvalidation\\8.6.1\\fluentvalidation.8.6.1.nupkg.sha512",
+    "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\fluentvalidation.validatorattribute\\8.6.1\\fluentvalidation.validatorattribute.8.6.1.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

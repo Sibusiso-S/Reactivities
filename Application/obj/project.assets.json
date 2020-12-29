@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "FluentValidation/8.6.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.ValidatorAttribute/8.6.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "[8.6.1, 9.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {}
+        }
+      },
       "MediatR/9.0.0": {
         "type": "package",
         "compile": {
@@ -462,6 +486,39 @@
     }
   },
   "libraries": {
+    "FluentValidation/8.6.1": {
+      "sha512": "g0xw/YCVgJ1IYpBgKF9iuci/Arf6Dsq9H/WeeT9zaBpjrEA+Cr2GjWXHu1F0DKqVzp4J4hta4gGrRt6H4aESqQ==",
+      "type": "package",
+      "path": "fluentvalidation/8.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.8.6.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.1/FluentValidation.dll",
+        "lib/netstandard1.1/FluentValidation.xml",
+        "lib/netstandard1.6/FluentValidation.dll",
+        "lib/netstandard1.6/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.ValidatorAttribute/8.6.1": {
+      "sha512": "OJOMPvZIeSD/X6TBNFSRhn5j/kvsBIuyn9k7coSgUoaillH4QXJn+LyPp8T9aSbZt3r+VIvzhkg782QeaHNnAQ==",
+      "type": "package",
+      "path": "fluentvalidation.validatorattribute/8.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.validatorattribute.8.6.1.nupkg.sha512",
+        "fluentvalidation.validatorattribute.nuspec",
+        "lib/net45/FluentValidation.ValidatorAttribute.dll",
+        "lib/netstandard1.1/FluentValidation.ValidatorAttribute.dll",
+        "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll"
+      ]
+    },
     "MediatR/9.0.0": {
       "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
       "type": "package",
@@ -1122,6 +1179,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Domain >= 1.0.0",
+      "FluentValidation.ValidatorAttribute >= 8.6.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
       "Persistence >= 1.0.0"
     ]
@@ -1177,6 +1235,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "FluentValidation.ValidatorAttribute": {
+            "target": "Package",
+            "version": "[8.6.1, )"
+          },
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[9.0.0, )"

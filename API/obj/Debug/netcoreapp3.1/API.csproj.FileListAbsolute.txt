@@ -53,3 +53,8 @@ C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\MediatR.dll
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\FluentValidation.ValidatorAttribute.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
