@@ -56,6 +56,7 @@ const ActivityForm: React.FC<RouteComponentProps<DetailParams>> = ({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    
     if (match.params.id) {
       setLoading(true);
       loadActivity(match.params.id)
