@@ -6,6 +6,10 @@ import App from "./app/layout/App";
 import reportWebVitals from "./reportWebVitals";
 import ScrollToTop from "./app/layout/ScrollToTop";
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-widgets/dist/css/react-widgets.css';
+import dateFnsLoaclizer from "react-widgets-date-fns"
+
+dateFnsLoaclizer();
 
 export const history =  createBrowserHistory();
 
