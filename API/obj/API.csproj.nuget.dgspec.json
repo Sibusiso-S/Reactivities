@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\api\\API.csproj": {}
+    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\api\\API.csproj": {
+    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\api\\API.csproj",
+        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\api\\obj\\",
+        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -137,6 +137,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
             "FluentValidation.ValidatorAttribute": {
               "target": "Package",
               "version": "[8.6.1, )"
@@ -348,6 +352,10 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[3.1.0, )"
             },

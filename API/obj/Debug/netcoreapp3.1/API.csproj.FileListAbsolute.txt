@@ -73,3 +73,7 @@ C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\sibusiso.sibanyoni\Desktop\2020\udemy\reactivities\Reactivities\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
