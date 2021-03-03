@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj": {}
+    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj": {
+    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\sibusiso.sibanyoni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -99,8 +99,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj"
+              "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sibusiso.sibanyoni\\Desktop\\work\\2020\\udemy\\reactivities\\Reactivities\\Domain\\Domain.csproj"
               }
             }
           }
