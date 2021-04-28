@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Button, Card, Grid, Header, Image, Tab } from 'semantic-ui-react';
 import { RootStoreContext } from '../../app/stores/rootStore';
 import PhotoUploadWidget from '../../app/common/photoUpload/PhotoUploadWidget';
+import { observer } from 'mobx-react-lite';
 
 const ProfilePhotos = () => {
 	const rootStore = useContext(RootStoreContext);
@@ -9,7 +10,7 @@ const ProfilePhotos = () => {
 	const [addPhotoMode, setAddPhotoMode] = useState(true);
 	return (
 		<Tab.Pane>
-			<Grid>
+			{/* <Grid>
 				<Grid.Column width={16} style={{ paddingBottom: 0 }}>
 					<Header floated="left" icon="image" content="Photos" />
 					{isCurrentUser && (
@@ -24,26 +25,26 @@ const ProfilePhotos = () => {
 				<Grid.Column width={16}>
 					{addPhotoMode ? (
 						<PhotoUploadWidget />
-					) : (
-						<Card.Group itemsPerRow={5}>
-							{profile &&
-								profile.photos.map((photo) => (
-									<Card key={photo.id}>
-										<Image src={photo.url} />
-										{isCurrentUser && (
-											<Button.Group fluid widths={2}>
-												<Button basic positive content="Main" />
-												<Button basic negative icon="trash" />
-											</Button.Group>
-										)}
-									</Card>
-								))}
-						</Card.Group>
-					)}
+					) : ( */}
+			<Card.Group itemsPerRow={5}>
+				{profile &&
+					profile.photos.map((photo) => (
+						<Card key={photo.id}>
+							<Image src={photo.url} />
+							{isCurrentUser && (
+								<Button.Group fluid widths={2}>
+									<Button basic positive content="Main" />
+									<Button basic negative icon="trash" />
+								</Button.Group>
+							)}
+						</Card>
+					))}
+			</Card.Group>
+			{/* )}
 				</Grid.Column>
-			</Grid>
+			</Grid> */}
 		</Tab.Pane>
 	);
 };
 
-export default ProfilePhotos;
+export default observer(ProfilePhotos);
