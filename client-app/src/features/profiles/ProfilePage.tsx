@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from 'react';
-import { Grid } from 'semantic-ui-react';
-import ProfileHeader from './ProfileHeader';
-import ProfileContent from './ProfileContent';
-import { RouteComponentProps } from 'react-router';
-import { RootStoreContext } from '../../app/stores/rootStore';
-import LoadingComponent from '../../app/layout/LoadingComponent';
 import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect } from 'react';
+import { RouteComponentProps } from 'react-router';
+import { Grid } from 'semantic-ui-react';
+import LoadingComponent from '../../app/layout/LoadingComponent';
+import { RootStoreContext } from '../../app/stores/rootStore';
+import ProfileContent from './ProfileContent';
+import ProfileHeader from './ProfileHeader';
+
 interface RouteParams {
 	username: string;
 }
@@ -18,14 +19,13 @@ const ProfilePage: React.FC<IProps> = ({ match }) => {
 
 	useEffect(() => {
 		loadProfile(match.params.username);
-		console.log('loadingProfile', loadingProfile);
-	}, [loadProfile, match, loadingProfile]);
+	}, [loadProfile, match]);
 
-	//if (loadingProfile) return <LoadingComponent content="Loading profile..." />;
+	if (loadingProfile) return <LoadingComponent content="Loading profile..." />;
 
 	return (
 		<Grid>
-			<Grid.Column width={16}>
+			<Grid.Column>
 				<ProfileHeader profile={profile!} />
 				<ProfileContent />
 			</Grid.Column>

@@ -30,8 +30,8 @@ export default class ProfileStore {
 	@action loadProfile = async (username: string) => {
 		this.loadingProfile = true;
 		console.log('Profile log true');
-		const profile = await agents.Profiles.get(username);
 		try {
+			const profile = await agents.Profiles.get(username);
 			runInAction(() => {
 				console.log('Profile log false');
 				this.loadingProfile = false;
