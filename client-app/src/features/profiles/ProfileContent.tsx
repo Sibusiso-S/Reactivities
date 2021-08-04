@@ -1,5 +1,6 @@
 import ProfileFollowings from './ProfileFollowings';
 import ProfilePhotos from './ProfilePhotos';
+import ProfileActivities from './ProfileActivities';
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
 
@@ -8,7 +9,7 @@ const panes = [
 	{ menuItem: 'Photos', render: () => <ProfilePhotos /> }, //This causes an error
 	{
 		menuItem: 'Activities',
-		render: () => <Tab.Pane>Activities content</Tab.Pane>,
+		render: () => <ProfileActivities />,
 	},
 	{
 		menuItem: 'Followers',

@@ -1,4 +1,4 @@
-import { IPhoto, IProfile } from '../models/profile';
+import { IPhoto, IProfile, IUserActivity } from '../models/profile';
 import {
 	action,
 	computed,
@@ -37,6 +37,8 @@ export default class ProfileStore {
 	@observable loading = false;
 	@observable activeTab: number = 0;
 	@observable followings: IProfile[] = [];
+	@observable userActivities: IUserActivity[] = [];
+	@observable loadingActivities = false;
 
 	@computed get isCurrentUser() {
 		if (this.rootStore.userStore.user && this.profile) {
@@ -48,6 +50,23 @@ export default class ProfileStore {
 			return false;
 		}
 	}
+
+	@action loadUserActivities = async (username: string, predicate?: string) => {
+		this.loadingActivities = true;
+		try {
+			const activities = await agents.Profiles.listActivities(
+				username,
+				predicate!,
+			);
+			runInAction(() => {
+				this.userActivities = activities;
+				this.loadingActivities = false;
+			});
+		} catch (error) {
+			toast.error('Problem loading activities');
+			runInAction(() => (this.loadingActivities = false));
+		}
+	};
 
 	@action setActiveTab = (activeIndex: number) => {
 		this.activeTab = activeIndex;
